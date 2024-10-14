@@ -38,6 +38,108 @@ Professor, California State University, Chico
 <sub>[LearnByFailure.com](https://learnbyfailure.com/thinking-like-a-tester/)</sub>
 
 </textarea></section>
+<section data-markdown  ><textarea data-template>
+
+#### What is software testing?
+
+----------
+
+* Systematic way to verify whether or not software is doing what is intended
+* [Majority of effort spent on software projects](https://dl.acm.org/doi/10.1145/3057269)
+* Sooner we discover faults, the better
+  * Automated tests
+  * E.g. Unit tests - verify smallest "unit" of code
+  * Regression tests
+
+
+</textarea></section>
+<section>
+<section data-markdown  data-auto-animate><textarea data-template>
+
+#### Example Unit Test
+
+----------
+
+* Given a function **place_piece** that receives **row** and **column** coordinates (each 0-2, inclusive), update the Tic-Tac-Toe board of the current player's mark (`X` or `O`) if the space is not yet occupied and return the character of the piece placed. Otherwise, if there is already a piece at that location return **'@'** or the coordinates are invalid, return **'?'**.
+
+</textarea></section>
+<section data-markdown  ><textarea data-template>
+
+#### Example Unit Test
+
+----------
+
+Example unit test assertions, 
+
+comparing **actual** and **expected** values:
+
+```ASSERT_EQ( game.place_piece(0,0) , 'X' );```
+
+```ASSERT_EQ( game.place_piece(-1,0) , '?' );```
+
+
+</textarea></section>
+</section>
+<section data-markdown  ><textarea data-template>
+
+#### Conventional Testing Metrics
+
+----------
+
+* **Coverage** - After all tests are run, what % of production code has been run?
+* **Testing effectiveness** - Percentage of faults caught by tests?
+  * **Mutation Testing** - Make "mutant" variants of code, are they "killed" by tests?
+
+* What are limitations to these metrics?
+
+</textarea></section>
+<section data-markdown  ><textarea data-template>
+
+#### What about Positive Verification?
+
+----------
+
+* Vice versa to **testing effectiveness**, how reliable are tests at **positively verifying** software requirements?
+* All-Pairs Function testing, by Function-Under-Test
+  * Does test find bugs in faulty implementations (testing effectiveness)
+  * Does test verify functionality in acceptible implementations (positive verification)
+* Struggles with either **positive verification** *or* **test effectiveness**, but rarely both on the same function [Buffardi and Valdivia, 2019](http://hdl.handle.net/10125/60199)
+
+</textarea></section>
+<section>
+<section data-markdown  ><textarea data-template>
+
+#### Measuring Testing Accuracy
+
+----------
+
+* How are **testing effectiveness** and **positively verification** related with a lack of faults? [Buffardi, Valdivia, and Rogers, 2019](https://doi.org/10.1145/3287324.3287351)
+  * **Accuracy** = (True Positives + True Negatives) / (True Positives + True Negatives + False Positives + False Negatives)
+  * **Accuracy** stronger correlation with lack of bugs than either **Test Effectiveness** or **Coverage**
+
+</textarea></section>
+<section data-markdown  ><textarea data-template>
+
+![Effectiveness vs Bugs](bug-finding.png)
+
+(ρ=.355, p<.0167)
+
+</textarea></section>
+<section data-markdown  ><textarea data-template>
+
+![Coverage vs Bugs](coverage.png)
+
+(ρ=.514, p<.001)
+
+</textarea></section>
+<section data-markdown  ><textarea data-template>
+
+![Accuracy vs Bugs](accuracy.png)
+
+(ρ=.648, p<.001)
+
+</textarea></section>
+</section>
 <section data-markdown ><textarea data-template>
 
 #### Thinking Like a Tester
