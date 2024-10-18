@@ -37,7 +37,7 @@ Professor, California State University, Chico
 
 * Systematic way to verify whether or not software is doing what is intended
 * [Majority of effort spent on software projects](https://dl.acm.org/doi/10.1145/3057269)
-* Sooner we discover faults, the better
+* Sooner we discover bugs, the better
   * Automated tests
   * E.g. Unit tests - verify smallest "unit" of code
   * Regression tests
@@ -77,7 +77,7 @@ comparing **actual** and **expected** values:
 ----------
 
 * **Coverage** - After all tests are run, what % of production code has been run?
-* **Testing effectiveness** - Percentage of faults caught by tests?
+* **Testing effectiveness** - Percentage of bugs caught by tests?
   * **Mutation Testing** - Make "mutant" variants of code, are they "killed" by tests?
 
 * What are limitations to these metrics?
@@ -109,7 +109,7 @@ comparing **actual** and **expected** values:
 
 ----------
 
-* How are **testing effectiveness** and **positive verification** related with a lack of faults? [(Buffardi, Valdivia, \& Rogers, 2019)](https://doi.org/10.1145/3287324.3287351)
+* How are **testing effectiveness** and **positive verification** related with a lack of bugs? [(Buffardi, Valdivia, \& Rogers, 2019)](https://doi.org/10.1145/3287324.3287351)
   * **Accuracy** = (True Positives + True Negatives) / 
     (True Positives + True Negatives + False Positives + False Negatives)
   * **Accuracy** stronger correlation with lack of bugs than either **Test Effectiveness** or **Coverage**
@@ -213,7 +213,7 @@ void sortDescending( int &first, int &second, int &third){
 
 ----------
 
-* **BUT** no correlation between CRT and unit test accuracy in neither original (ρ=0.008, p=0.940) nor reproduction (ρ=0.113, p=0.498) studies [(Buffardi 2023)](https://doi.org/10.1109/ICSE-SEET58685.2023.00006)
+* **BUT** no correlation between CRT and unit test accuracy in either original (ρ=0.008, p=0.940) or reproduction (ρ=0.113, p=0.498) studies [(Buffardi 2023)](https://doi.org/10.1109/ICSE-SEET58685.2023.00006)
 * *Why do you think cognitive reflection is associated with manually reviewing code, but not unit test accuracy?*
 
 [comment]: # (!!!)
