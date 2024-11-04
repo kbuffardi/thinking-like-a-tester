@@ -77,9 +77,15 @@ Example unit test assertions,
 
 comparing **actual** and **expected** values:
 
-```ASSERT_EQ( game.place_piece(0,0) , 'X' );```
+```
+TicTacToeBoard game;
+ASSERT_EQ( game.place_piece(0,0) , 'X' );
+```
 
-```ASSERT_EQ( game.place_piece(-1,0) , '?' );```
+```
+TicTacToeBoard game;
+ASSERT_EQ( game.place_piece(-1,0) , '?' );
+```
 
 
 </textarea></section>
@@ -186,45 +192,14 @@ A bat and a ball cost `$1.10` in total. The bat costs `$1.00` more than the ball
 
 * <small>Receive a string and return whether or not it is strictly a palindrome, where it is spelled the same backwards and forwards when considering every character in the string, but disregarding case ('x' is same as 'X')</small>
 
-```
-bool isPalindrome(string input){
-  for( int i=0; i < input.size(); i++ ){
-    if( input[i] < 'A' || input[i] > 'Z' ){
-      input[i] = input[i] - ('a' - 'A');
-    }
-  }
-  for( int i=0; i < input.size()/2; i++ ){
-    if( input[i] != input[input.size()-1-i] )
-      return false;
-  }
-  return true;
-}
-```
+![Example implementation of isPalindrome function](isPalindrome.png)
 
 </textarea></section>
 <section data-markdown  ><textarea data-template>
 
 * <small>Receive three integers and rearrange their values so that they are in descending order from greatest (first) to least (third)</small>
 
-```
-void sortDescending( int &first, int &second, int &third){
-  if( first < second ){
-    int temp = first;
-    first = second;
-    second = temp;
-  }
-  if( second < third ){
-    int temp = second;
-    second = third;
-    third = temp;
-  }
-  if( first < third ){
-    int temp = first;
-    first = third;
-    third = temp;
-  }
-}
-```
+![Example implementation of sortDescending function](sortDescending.png)
 
 </textarea></section>
 </section>
@@ -238,7 +213,7 @@ void sortDescending( int &first, int &second, int &third){
 * CRT was a significant predictor of:
   * manually **rejecting defective code** (p<0.0001) with the log odds of correctly rejecting the defective code increasing by 2.94 (95% CI 1.56-4.50)
   * manually **identifying a defective case** (p<0.001) with the log odds of doing so increasing by 2.37 (95% CI 1.05-3.86).
-* Reproduced association (ρ=0.478, p<0.01) between CRT and manual inspection in a study with a variant of CRT and different functions
+* Reproduction study: significant positive correlation (ρ=0.478, p<0.01) between CRT and manual inspection in a study with a variant of CRT (with no math) and different functions for manual inspection
 
 </textarea></section>
 <section data-markdown  ><textarea data-template>
