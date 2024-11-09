@@ -35,11 +35,11 @@ Professor, California State University, Chico
 
 ----------
 
-* Systematic way to verify whether or not software is doing what is intended
+* Systematic way to check whether or not software is doing what is intended
 * [Majority of effort spent on software projects](https://dl.acm.org/doi/10.1145/3057269)
 * Sooner we discover bugs, the better
   * Automated tests
-  * E.g. Unit tests - verify smallest "unit" of code
+  * E.g. Unit tests - check functionality of smallest "unit" of code
   * Regression tests
 
 
@@ -90,11 +90,11 @@ ASSERT_EQ( game.place_piece(-1,0) , '?' );
 
 [comment]: # (!!!)
 
-#### What about Positive Verification?
+#### What about Positive Affirmation?
 
 ----------
 
-* How reliably do tests **positively verify** software requirements?
+* How reliably do tests **positively affirm** functionality consistent with software requirements?
 * All-Function Pairs testing
   1. Classify each student's code (against instructor's tests) as **acceptable** or **buggy**
   2. Run each student's tests against each 
@@ -106,7 +106,7 @@ ASSERT_EQ( game.place_piece(-1,0) , '?' );
 
 [comment]: # (|||)
 
-* Found struggles with either **positive verification** *or* **test effectiveness**, but rarely both on the same function 
+* Found struggles with either **positive affirmation** *or* **test effectiveness**, but rarely both on the same function 
 * Either type of inaccuracy is *equally associated* with number of bugs in *their own* code [(Buffardi \& Valdivia, 2019)](http://hdl.handle.net/10125/60199)
 
 [comment]: # (!!!)
@@ -115,7 +115,7 @@ ASSERT_EQ( game.place_piece(-1,0) , '?' );
 
 ----------
 
-* How are **testing effectiveness** and **positive verification** related with a lack of bugs? [(Buffardi, Valdivia, \& Rogers, 2019)](https://doi.org/10.1145/3287324.3287351)
+* How are **testing effectiveness** and **positive affirmation** related with a lack of bugs? [(Buffardi, Valdivia, \& Rogers, 2019)](https://doi.org/10.1145/3287324.3287351)
   * **Accuracy** = (True Positives + True Negatives) / 
     (True Positives + True Negatives + False Positives + False Negatives)
   * **Accuracy** stronger correlation with lack of bugs than either **Test Effectiveness** or **Coverage**
