@@ -65,15 +65,11 @@ Example unit test assertions,
 
 comparing **actual** and **expected** values:
 
-```
-TicTacToeBoard game;
-ASSERT_EQ( game.place_piece(0,0) , 'X' );
-```
+`ASSERT_EQ( game.place_piece(0,0) , 'X' );`
 
-```
-TicTacToeBoard game;
-ASSERT_EQ( game.place_piece(-1,0) , '?' );
-```
+Or 
+
+`ASSERT_EQ( game.place_piece(-1,0) , '?' );`
 
 
 [comment]: # (!!!)
@@ -87,6 +83,15 @@ ASSERT_EQ( game.place_piece(-1,0) , '?' );
   * **Mutation Testing** - Make "mutant" variants of code, are they "killed" by tests?
 
 * What are limitations to these metrics?
+
+[comment]: # (|||)
+
+
+#### What about...
+
+----------
+
+`ASSERT_EQ( true, false );`
 
 [comment]: # (!!!)
 

@@ -77,19 +77,16 @@ Example unit test assertions,
 
 comparing **actual** and **expected** values:
 
-```
-TicTacToeBoard game;
-ASSERT_EQ( game.place_piece(0,0) , 'X' );
-```
+`ASSERT_EQ( game.place_piece(0,0) , 'X' );`
 
-```
-TicTacToeBoard game;
-ASSERT_EQ( game.place_piece(-1,0) , '?' );
-```
+Or 
+
+`ASSERT_EQ( game.place_piece(-1,0) , '?' );`
 
 
 </textarea></section>
 </section>
+<section>
 <section data-markdown  ><textarea data-template>
 
 #### Conventional Testing Metrics
@@ -103,6 +100,17 @@ ASSERT_EQ( game.place_piece(-1,0) , '?' );
 * What are limitations to these metrics?
 
 </textarea></section>
+<section data-markdown  ><textarea data-template>
+
+
+#### What about...
+
+----------
+
+`ASSERT_EQ( true, false );`
+
+</textarea></section>
+</section>
 <section>
 <section data-markdown  ><textarea data-template>
 
