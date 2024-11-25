@@ -79,10 +79,20 @@ Or
 ----------
 
 * **Coverage** - After all tests are run, what % of production code has been run?
-* **Testing effectiveness** - Percentage of bugs caught by tests?
-  * **Mutation Testing** - Make "mutant" variants of code, are they "killed" by tests?
+  * Benefit: can identify code that has not been tested
+  * Limitation of coverage?
 
-* What are limitations to these metrics?
+[comment]: # (|||)
+
+* **Mutation Testing** - Make "mutant" variants of code, are they "killed" by tests?
+  * **Testing effectiveness** - Percentage of bugs caught by tests?
+
+``` [1|2|3|4]
+if( row >= 0 && row <= 2 && column >= 0 && column <= 2 ) // original
+if( row >= 0 && row <= 2 && column > 0 && column <= 2 ) // mutant 1
+if( row >= 0 && row <= 2 && column >= 0 ) // mutant 2
+if( row >= 0 && row <= 2 || column >= 0 && column <= 2 ) // mutant 3
+```
 
 [comment]: # (|||)
 
